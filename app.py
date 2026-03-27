@@ -11,7 +11,12 @@ st.set_page_config(page_title="Hospital Billing App", layout="wide")
 # DATABASE CONNECTION
 # -------------------------------
 conn = psycopg2.connect(
-    "postgresql://postgres:practiceprojectsskillss@db.ofzffwiizwhbmnavszlw.supabase.co:5432/postgres"
+    host="db.ofzffwiizwhbmnavszlw.supabase.co",
+    database="postgres",
+    user="postgres",
+    password="practiceprojectsskillss",
+    port="5432",
+    sslmode="require"
 )
 
 cursor = conn.cursor()
